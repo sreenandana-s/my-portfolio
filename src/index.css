@@ -1,0 +1,90 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    @apply border-line;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-base text-ink font-sans antialiased;
+    background-color: #0b1020;
+  }
+
+  ::selection {
+    background: rgba(139, 92, 246, 0.35);
+    color: #fff;
+  }
+
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #0b1020;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, #6366f1, #8b5cf6);
+    border-radius: 999px;
+    border: 2px solid #0b1020;
+  }
+
+  :focus-visible {
+    outline: 2px solid #a5b4fc;
+    outline-offset: 3px;
+    border-radius: 4px;
+  }
+}
+
+@layer components {
+  .glass {
+    @apply bg-white/[0.035] backdrop-blur-xl border border-white/[0.08];
+  }
+
+  .glass-strong {
+    @apply bg-white/[0.055] backdrop-blur-2xl border border-white/[0.1];
+  }
+
+  .text-gradient {
+    @apply bg-grad-text bg-clip-text text-transparent;
+  }
+
+  .container-page {
+    @apply mx-auto w-full max-w-content px-6 sm:px-8 lg:px-10;
+  }
+
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 rounded-2xl px-5 py-3 text-sm font-medium transition-all duration-300 ease-out;
+  }
+
+  .btn-primary {
+    @apply btn text-white shadow-glow bg-grad-primary hover:brightness-110 active:brightness-95;
+  }
+
+  .btn-secondary {
+    @apply btn glass text-ink hover:bg-white/[0.07] hover:border-white/[0.16];
+  }
+
+  .pill {
+    @apply inline-flex items-center gap-2 rounded-full border border-white/[0.08] bg-white/[0.03] px-3.5 py-1.5 text-sm text-ink/90 transition-colors duration-200;
+  }
+
+  .section-label {
+    @apply text-sm font-medium text-accent-glow/90;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
