@@ -21,7 +21,7 @@ export default function Hero() {
               {/* Top Arch Header */}
               <div className="text-center pt-3 pb-5 border-b border-neutral-300">
                 <span className="text-[10px] uppercase tracking-widest text-neutral-500 block">
-                  System Blueprint // Architecture
+                  TECHNICAL PROFILE
                 </span>
                 <span className="text-xs uppercase tracking-wider text-charcoal font-semibold mt-1 block">
                   IIIT Kottayam &middot; CSE
