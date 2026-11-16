@@ -4,24 +4,26 @@ export default {
   theme: {
     extend: {
       colors: {
-        base: {
-          DEFAULT: "#0B1020",
-          soft: "#10152A",
-          deep: "#070A16",
-        },
-        ink: {
-          DEFAULT: "#E9EBF6",
-          muted: "#9098B8",
-          faint: "#5C6382",
-        },
-        accent: {
-          indigo: "#6366F1",
-          violet: "#8B5CF6",
-          glow: "#A5B4FC",
-        },
-        line: "rgba(255,255,255,0.08)",
+        raspberry: "#5B3DF5",
+        "pale-sky": "#E8DEFF",
+        canvas: "#F4EFFC",
+        "canvas-muted": "#EDE6F8",
+        charcoal: "#1F1F1F",
+        "charcoal-muted": "#4A4A4A",
+        "neutral-600": "#5A5A5A",
+        "neutral-400": "#8E8E93",
+        "neutral-300": "#D8D0E3",
+        "neutral-200": "#E6DFEE",
+        "neutral-100": "#F1EBF7",
+        "off-white": "#FAF8FD",
       },
       fontFamily: {
+        serif: [
+          '"Playfair Display"',
+          '"Cormorant Garamond"',
+          "Georgia",
+          "serif",
+        ],
         sans: [
           "Inter",
           "-apple-system",
@@ -30,20 +32,11 @@ export default {
           "sans-serif",
         ],
       },
-      borderRadius: {
-        "2xl": "1.25rem",
-        "3xl": "1.75rem",
-      },
-      boxShadow: {
-        glass: "0 1px 1px rgba(255,255,255,0.06) inset, 0 20px 60px -20px rgba(0,0,0,0.6)",
-        glow: "0 0 0 1px rgba(139,92,246,0.25), 0 8px 40px -8px rgba(99,102,241,0.45)",
-      },
-      backgroundImage: {
-        "grad-primary": "linear-gradient(135deg, #6366F1 0%, #8B5CF6 100%)",
-        "grad-text": "linear-gradient(135deg, #C7D2FE 0%, #A5B4FC 40%, #C4B5FD 100%)",
-      },
       maxWidth: {
-        content: "72rem",
+        content: "76rem",
+      },
+      borderWidth: {
+        DEFAULT: "1px",
       },
     },
   },

@@ -1,10 +1,22 @@
 export const profile = {
   name: "Sreenandana S",
-  headline: "Computer Science Undergraduate • Backend & Full-Stack Developer",
-  university: "IIIT Kottayam",
+  headline: "Computer Science Undergraduate · Software Engineer",
+  primaryDomain: "Software Engineering",
+  focusAreas: [
+    "Full-Stack Development",
+    "Backend Systems",
+    "AI / Machine Learning",
+    "Database Engineering",
+  ],
+  university: "Indian Institute of Information Technology (IIIT), Kottayam",
+  universityShort: "IIIT Kottayam",
+  degree: "B.Tech Computer Science and Engineering",
+  degreeTimeline: "August 2024 – Present",
+  cgpa: "8.02/10",
   location: "Kerala, India",
   email: "sreenandanas29@gmail.com",
+  phone: "+91 9633088796",
   github: "https://github.com/sreenandana-s",
   linkedin: "https://www.linkedin.com/in/sreenandana-s/",
-  resumeUrl: "/resume.pdf", // Replace with the real resume file in /public
+  resumeUrl: "/Resume_Final.pdf",
 };

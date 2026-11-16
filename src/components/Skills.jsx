@@ -1,51 +1,70 @@
-import { motion } from "framer-motion";
 import { skillGroups } from "../data/skills";
+
+const categoryIndices = ["01", "02", "03", "04", "05"];
 
 export default function Skills() {
   return (
-    <section id="skills" className="relative py-28">
+    <section id="skills" className="py-28 border-t border-neutral-300 relative">
       <div className="container-page">
-        <motion.div
-          initial={{ opacity: 0, y: 16 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-80px" }}
-          transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
-          className="mb-14 max-w-xl"
-        >
-          <h2 className="text-3xl font-semibold tracking-tight text-ink sm:text-4xl">
-            Skills
-          </h2>
-          <p className="mt-4 text-ink-muted">
-            The languages, frameworks, and tools I reach for most often.
+        {/* Section Header */}
+        <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-16 pb-6 border-b border-neutral-300">
+          <div>
+            <span className="section-tag font-mono">02 / Competencies</span>
+            <h2 className="section-title mt-2">Technical Taxonomy</h2>
+          </div>
+          <p className="font-mono text-xs uppercase tracking-widest text-neutral-400 max-w-xs text-left sm:text-right">
+            Languages, frameworks, database architectures &amp; AI models
           </p>
-        </motion.div>
+        </div>
 
-        <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-          {skillGroups.map((group, i) => (
-            <motion.div
+        {/* Editorial Catalogue Table Layout */}
+        <div className="border-t border-neutral-300">
+          {skillGroups.map((group, idx) => (
+            <div
               key={group.label}
-              initial={{ opacity: 0, y: 16 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-60px" }}
-              transition={{
-                duration: 0.5,
-                delay: i * 0.06,
-                ease: [0.16, 1, 0.3, 1],
-              }}
-              className="glass rounded-2xl p-6 transition-colors duration-300 hover:bg-white/[0.05]"
+              className="grid grid-cols-1 md:grid-cols-12 py-8 border-b border-neutral-300 items-start gap-6"
             >
-              <h3 className="text-sm font-medium text-accent-glow">
-                {group.label}
-              </h3>
-              <div className="mt-4 flex flex-wrap gap-2">
+              {/* Category Index & Label */}
+              <div className="md:col-span-4 flex items-baseline gap-4">
+                <span className="font-mono text-xs text-neutral-400">
+                  [{categoryIndices[idx]}]
+                </span>
+                <div>
+                  <h3 className="font-serif text-2xl font-normal text-charcoal">
+                    {group.label}
+                  </h3>
+                  <span className="font-mono text-[11px] uppercase tracking-wider text-raspberry">
+                    {group.items.length} Technologies
+                  </span>
+                </div>
+              </div>
+
+              {/* Technologies Pills */}
+              <div className="md:col-span-8 flex flex-wrap gap-2.5 items-center">
                 {group.items.map((item) => (
-                  <span key={item} className="pill !py-1.5 !text-[13px]">
+                  <span
+                    key={item}
+                    className="inline-flex items-center px-4 py-2 bg-white border border-neutral-300 text-xs font-mono uppercase tracking-wider text-charcoal"
+                  >
                     {item}
                   </span>
                 ))}
               </div>
-            </motion.div>
+            </div>
           ))}
+        </div>
+
+        {/* Editorial Footnote Banner */}
+        <div className="mt-12 p-6 bg-pale-sky border border-neutral-300 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+          <div className="flex items-center gap-3">
+            <span className="w-2.5 h-2.5 rounded-full bg-raspberry flex-none" />
+            <p className="font-mono text-xs uppercase tracking-wider text-charcoal">
+              Core Stack Focus: React.js &middot; TypeScript &middot; Supabase &middot; PostgreSQL &middot; PyTorch
+            </p>
+          </div>
+          <span className="font-mono text-[11px] uppercase tracking-widest text-neutral-600">
+            Engineered for Production
+          </span>
         </div>
       </div>
     </section>

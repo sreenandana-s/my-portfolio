@@ -1,99 +1,195 @@
-import { motion } from "framer-motion";
-import { ArrowDown, Download, Github } from "lucide-react";
-import GradientBackground from "./GradientBackground";
+import { HugeiconsIcon } from "@hugeicons/react";
+import {
+  File01Icon,
+  Download01Icon,
+  ArrowRight01Icon,
+  GithubIcon,
+} from "@hugeicons/core-free-icons";
 import { profile } from "../data/profile";
-
-const container = {
-  hidden: {},
-  show: {
-    transition: { staggerChildren: 0.12, delayChildren: 0.15 },
-  },
-};
-
-const item = {
-  hidden: { opacity: 0, y: 18 },
-  show: {
-    opacity: 1,
-    y: 0,
-    transition: { duration: 0.7, ease: [0.16, 1, 0.3, 1] },
-  },
-};
 
 export default function Hero() {
   return (
     <section
       id="top"
-      className="relative flex min-h-screen items-center overflow-hidden pt-28 pb-20"
+      className="relative min-h-[90vh] pt-32 pb-20 flex items-center"
     >
-      <GradientBackground />
+      <div className="container-page w-full">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-10 items-center">
+          {/* Left Column: Architectural Engineering & AI Blueprint Frame */}
+          <div className="lg:col-span-5 flex justify-center lg:justify-start">
+            <div className="w-full max-w-sm sm:max-w-md rounded-t-full bg-pale-sky border border-neutral-300 p-6 sm:p-8 flex flex-col justify-between font-mono">
+              {/* Top Arch Header */}
+              <div className="text-center pt-3 pb-5 border-b border-neutral-300">
+                <span className="text-[10px] uppercase tracking-widest text-neutral-500 block">
+                  System Blueprint // Architecture
+                </span>
+                <span className="text-xs uppercase tracking-wider text-charcoal font-semibold mt-1 block">
+                  IIIT Kottayam &middot; CSE
+                </span>
+                <span className="text-[10px] text-raspberry font-medium mt-0.5 block">
+                  August 2024 &ndash; Present
+                </span>
+              </div>
 
-      <div className="container-page relative">
-        <motion.div
-          variants={container}
-          initial="hidden"
-          animate="show"
-          className="max-w-3xl"
-        >
-          <motion.div
-            variants={item}
-            className="pill mb-8 w-fit text-ink-muted"
-          >
-            <span className="h-1.5 w-1.5 rounded-full bg-emerald-400" />
-            {profile.university} &middot; {profile.location}
-          </motion.div>
+              {/* Center Architecture Blueprint Components */}
+              <div className="my-6 space-y-4">
+                {/* 1. Backend & Data Layer Schematic */}
+                <div className="bg-white border border-neutral-300 p-4 space-y-2">
+                  <div className="flex items-center justify-between text-[10px] text-neutral-400 uppercase tracking-wider border-b border-neutral-100 pb-1.5">
+                    <span>Data &amp; Service Layer</span>
+                    <span className="text-charcoal font-semibold">PostgreSQL</span>
+                  </div>
 
-          <motion.h1
-            variants={item}
-            className="text-4xl font-semibold leading-[1.1] tracking-tight text-ink sm:text-5xl lg:text-6xl"
-          >
-            Building thoughtful digital
-            <br className="hidden sm:block" /> experiences with code.
-          </motion.h1>
+                  <div className="space-y-1.5 text-[10px]">
+                    <div className="flex items-center justify-between px-2 py-1 bg-canvas border border-neutral-200">
+                      <span className="text-charcoal">Supabase &middot; Auth RBAC</span>
+                      <span className="text-raspberry font-semibold text-[9px]">ENFORCED</span>
+                    </div>
+                    <div className="flex items-center justify-between px-2 py-1 bg-canvas border border-neutral-200">
+                      <span className="text-charcoal">REST API &middot; Relational Schema</span>
+                      <span className="text-neutral-500 text-[9px]">200 OK</span>
+                    </div>
+                  </div>
+                </div>
 
-          <motion.p
-            variants={item}
-            className="mt-6 max-w-xl text-lg leading-relaxed text-ink-muted"
-          >
-            I&rsquo;m <span className="text-ink font-medium">Sreenandana S</span>, a
-            Computer Science student at {profile.university} passionate about
-            backend engineering and modern web development. I enjoy building
-            scalable applications using React, Node.js, Python, and PostgreSQL.
-          </motion.p>
+                {/* 2. Transformer & ML Layer Schematic */}
+                <div className="bg-white border border-neutral-300 p-4 space-y-2">
+                  <div className="flex items-center justify-between text-[10px] text-neutral-400 uppercase tracking-wider border-b border-neutral-100 pb-1.5">
+                    <span>AI / ML Inference</span>
+                    <span className="text-raspberry font-semibold">PyTorch</span>
+                  </div>
 
-          <motion.div variants={item} className="mt-10 flex flex-wrap gap-3">
-            <a href="#projects" className="btn-primary">
-              View Projects
-            </a>
-            <a
-              href={profile.resumeUrl}
-              download
-              className="btn-secondary"
-            >
-              <Download size={16} />
-              Download Resume
-            </a>
-            <a
-              href={profile.github}
-              target="_blank"
-              rel="noreferrer"
-              className="btn-secondary"
-            >
-              <Github size={16} />
-              GitHub
-            </a>
-          </motion.div>
-        </motion.div>
+                  <div className="grid grid-cols-2 gap-2 text-[10px] text-center">
+                    <div className="p-2 bg-canvas border border-neutral-200">
+                      <span className="block text-[8px] text-neutral-500 uppercase">MuRIL-large</span>
+                      <span className="block font-serif text-sm font-normal text-charcoal mt-0.5">88.47%</span>
+                      <span className="block text-[8px] text-neutral-400">Accuracy</span>
+                    </div>
+                    <div className="p-2 bg-canvas border border-neutral-200">
+                      <span className="block text-[8px] text-neutral-500 uppercase">Macro-F1</span>
+                      <span className="block font-serif text-sm font-normal text-raspberry mt-0.5">81.00%</span>
+                      <span className="block text-[8px] text-neutral-400">Test Score</span>
+                    </div>
+                  </div>
+                </div>
+
+                {/* 3. Academic Metrics */}
+                <div className="bg-white border border-neutral-300 p-3 flex items-center justify-between text-[10px]">
+                  <span className="text-neutral-500 uppercase tracking-wider">Academic Standing</span>
+                  <span className="font-semibold text-charcoal">CGPA 8.02 / 10</span>
+                </div>
+              </div>
+
+              {/* Bottom Arch Footer */}
+              <div className="border-t border-neutral-300 pt-3 text-center">
+                <span className="text-[10px] uppercase tracking-widest text-neutral-600 block">
+                  Software Engineering &middot; Full-Stack &middot; AI/ML
+                </span>
+              </div>
+            </div>
+          </div>
+
+          {/* Right Column: Monumental Editorial Typography & Actions */}
+          <div className="lg:col-span-7 flex flex-col justify-center">
+            {/* Section Tag with Correct Date */}
+            <div className="flex items-center gap-3">
+              <span className="h-[1px] w-8 bg-raspberry" />
+              <span className="text-xs font-semibold uppercase tracking-[0.22em] text-raspberry font-mono">
+                Developer Portfolio
+              </span>
+              <span className="text-neutral-400 font-mono text-xs">&middot;</span>
+              <span className="text-xs uppercase tracking-widest text-neutral-600 font-mono">
+                August 2024 &ndash; Present
+              </span>
+            </div>
+
+            {/* Oversized Name Headline */}
+            <h1 className="mt-5 font-serif text-4xl sm:text-6xl lg:text-[4.6rem] font-normal leading-[1.04] tracking-tight text-charcoal uppercase">
+              Sreenandana S
+            </h1>
+
+            {/* Identity Subtitle */}
+            <p className="mt-3 text-lg sm:text-xl font-light tracking-wide text-charcoal-muted">
+              Computer Science Undergraduate &amp; Software Engineer
+            </p>
+
+            {/* Concise Editorial Introduction */}
+            <p className="mt-6 max-w-xl text-base sm:text-[17px] leading-relaxed text-neutral-600 font-light">
+              Engineering across full-stack development, backend systems, database
+              architectures, and AI/ML. Currently pursuing B.Tech in Computer
+              Science and Engineering at IIIT Kottayam, building resilient applications
+              with React, Node.js, Python, and PostgreSQL.
+            </p>
+
+            {/* Action Buttons Row */}
+            <div className="mt-9 flex flex-wrap items-center gap-3">
+              {/* Primary Project Action */}
+              <a
+                href="#projects"
+                className="btn-editorial-primary"
+              >
+                <span>View Projects</span>
+                <HugeiconsIcon icon={ArrowRight01Icon} size={15} />
+              </a>
+
+              {/* Functional Resume Button (Opens PDF in new tab with optional download) */}
+              <div className="inline-flex">
+                <a
+                  href={profile.resumeUrl}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="btn-editorial-secondary !border-r-0"
+                >
+                  <HugeiconsIcon icon={File01Icon} size={14} />
+                  <span>Resume</span>
+                </a>
+                <a
+                  href={profile.resumeUrl}
+                  download="Sreenandana_S_Resume.pdf"
+                  className="btn-editorial-secondary !px-3.5 hover:bg-neutral-200"
+                  title="Download Resume PDF"
+                  aria-label="Download Resume PDF"
+                >
+                  <HugeiconsIcon icon={Download01Icon} size={14} />
+                </a>
+              </div>
+
+              {/* GitHub Button */}
+              <a
+                href={profile.github}
+                target="_blank"
+                rel="noreferrer"
+                className="btn-editorial-subtle"
+              >
+                <HugeiconsIcon icon={GithubIcon} size={15} />
+                <span>GitHub</span>
+              </a>
+            </div>
+
+            {/* Clean Aligned Bottom Metadata Bar */}
+            <div className="mt-14 pt-8 border-t border-neutral-300">
+              <div className="grid grid-cols-2 sm:grid-cols-4 gap-6 font-mono text-xs text-neutral-600">
+                <div>
+                  <span className="text-neutral-400 uppercase tracking-widest block text-[10px]">Institution</span>
+                  <span className="font-medium text-charcoal mt-1 block">{profile.universityShort}</span>
+                </div>
+                <div>
+                  <span className="text-neutral-400 uppercase tracking-widest block text-[10px]">Academic Standing</span>
+                  <span className="font-medium text-raspberry mt-1 block">CGPA {profile.cgpa}</span>
+                </div>
+                <div>
+                  <span className="text-neutral-400 uppercase tracking-widest block text-[10px]">Timeline</span>
+                  <span className="font-medium text-charcoal mt-1 block">August 2024 &ndash; Present</span>
+                </div>
+                <div>
+                  <span className="text-neutral-400 uppercase tracking-widest block text-[10px]">Primary Domain</span>
+                  <span className="font-medium text-charcoal mt-1 block">Software Engineering</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-
-      <motion.a
-        href="#about"
-        aria-label="Scroll to About section"
-        className="absolute bottom-8 left-1/2 hidden -translate-x-1/2 rounded-full border border-white/[0.08] p-2.5 text-ink-muted sm:flex"
-        animate={{ y: [0, 6, 0] }}
-        transition={{ duration: 2.2, repeat: Infinity, ease: "easeInOut" }}
-      >
-        <ArrowDown size={16} />
-      </motion.a>
     </section>
   );
 }

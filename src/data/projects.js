@@ -1,61 +1,71 @@
-// Edit this file to add, remove, or update portfolio projects.
-// `image` accepts any URL or a path under /public. Leave empty for a generated placeholder.
-
 export const projects = [
   {
     id: "ullaas",
-    name: "ULLAAS",
+    name: "ULLAAS – The Joy of Growth",
     collaborative: true,
     description:
-      "A localized e-commerce platform connecting Kudumbashree women entrepreneurs directly with buyers, built to make community-run marketplaces discoverable online.",
-    contribution: [
-      "Backend development",
-      "Supabase authentication",
-      "PostgreSQL integration",
-      "REST API development",
-      "Role-based access control",
+      "A localized e-commerce platform connecting Kudumbashree women entrepreneurs with buyers, built to make community-run marketplaces discoverable online.",
+    highlights: [
+      "Developed backend services for a localized e-commerce platform connecting Kudumbashree women entrepreneurs with buyers using Supabase and PostgreSQL.",
+      "Implemented authentication, product listing management, order processing, and role-based access control for Seller, Buyer, and Admin workflows.",
+      "Integrated REST APIs with the frontend for secure data management and scalable backend functionality.",
     ],
-    tech: ["React", "TypeScript", "Supabase", "PostgreSQL", "Tailwind CSS"],
+    tech: [
+      "React.js",
+      "TypeScript",
+      "Supabase",
+      "PostgreSQL",
+      "Tailwind CSS",
+      "REST APIs",
+    ],
     links: {
       github: "https://github.com/yogita-mehta/ullas-market",
       live: "https://ullas-market.vercel.app/",
     },
-    accent: "indigo",
   },
   {
-    id: "gridlock",
-    name: "Flipkart Gridlock",
+    id: "lazylift",
+    name: "LazyLift – AI-Powered Adaptive Academic Planner",
     collaborative: true,
     description:
-      "An event-driven traffic congestion prediction dashboard with interactive maps and live analytics for tracking urban traffic patterns.",
-    contribution: [
-      "Streamlit dashboard",
-      "Folium map visualization",
-      "Backend API integration",
-      "Traffic metrics visualization",
+      "A full-stack academic planning platform that processes syllabi and previous-year question papers for personalized study planning.",
+    highlights: [
+      "Built a full-stack academic planning platform that processes syllabi and previous-year question papers to extract questions, topics, marks, and academic evidence for personalized study planning.",
+      "Implemented question-topic mapping, duplicate detection, PYQ-based topic weightage, explainable priorities, and dynamically generated study plans.",
+      "Developed persistent calendar scheduling and a natural-language scheduling assistant with conflict-aware rescheduling and database persistence.",
     ],
-    tech: ["Python", "Streamlit", "Folium"],
+    tech: [
+      "React.js",
+      "TypeScript",
+      "Node.js",
+      "SQLite",
+      "Gemini API",
+      "REST APIs",
+    ],
     links: {
-      github: "https://github.com/yogita-mehta/Gridlock-TrafficSense",
+      github: "https://github.com/GradienttAscent/ll",
+      live: "https://ll-three-gilt.vercel.app/",
     },
-    accent: "violet",
   },
   {
-    id: "sentiment-analyser",
-    name: "IMDb Sentiment Analysis",
+    id: "offensive-lang",
+    name: "Multilingual Offensive Language Detection in Dravidian Code-Mixed Text",
     collaborative: false,
     description:
-      "A machine learning project that classifies movie reviews as positive or negative using classic natural language processing techniques.",
-    contribution: [
-      "TF-IDF vectorization",
-      "Logistic Regression",
-      "Naive Bayes",
-      "Support Vector Machine comparison",
+      "A multilingual NLP classification pipeline for offensive language detection in Tamil-English, Malayalam-English, and Kannada-English code-mixed text.",
+    highlights: [
+      "Developed a multilingual NLP classification pipeline for offensive language detection in Tamil-English, Malayalam-English, and Kannada-English code-mixed text.",
+      "Fine-tuned a pretrained MuRIL-large transformer model for binary classification using a pooled multilingual dataset.",
+      "Achieved 88.47% accuracy and 81.00% Macro-F1 on the test set.",
+      "Conducted language-wise evaluation and error analysis.",
     ],
-    tech: ["Python", "Scikit-learn", "NLP"],
-    links: {
-      github: "https://github.com/sreenandana-s/Sentiment_Analyser",
-    },
-    accent: "indigo",
+    tech: [
+      "Python",
+      "PyTorch",
+      "Hugging Face Transformers",
+      "MuRIL",
+      "Scikit-learn",
+    ],
+    links: {},
   },
 ];
