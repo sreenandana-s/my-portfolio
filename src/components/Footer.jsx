@@ -2,8 +2,8 @@ import { profile } from "../data/profile";
 
 export default function Footer() {
   return (
-    <footer className="border-t border-neutral-300 py-10 bg-canvas">
-      <div className="container-page flex flex-col sm:flex-row items-center justify-between gap-4 font-mono text-xs text-neutral-500">
+    <footer className="border-t border-neutral-200 py-10 bg-canvas">
+      <div className="container-page flex flex-col sm:flex-row items-center justify-between gap-4 font-mono text-xs text-charcoal-muted">
         <div className="flex items-center gap-3">
           <span className="font-serif text-sm font-semibold text-charcoal">
             {profile.name}
@@ -17,7 +17,7 @@ export default function Footer() {
           <span className="text-neutral-300">&middot;</span>
           <a
             href="#top"
-            className="hover:text-charcoal transition-colors underline underline-offset-4"
+            className="hover:text-terracotta transition-colors underline underline-offset-4"
           >
             Back to Top &uarr;
           </a>

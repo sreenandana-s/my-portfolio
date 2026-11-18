@@ -3,10 +3,10 @@ import ProjectCard from "./ProjectCard";
 
 export default function Projects() {
   return (
-    <section id="projects" className="py-28 border-t border-neutral-300 relative">
+    <section id="projects" className="py-24 border-t border-neutral-200 relative">
       <div className="container-page">
         {/* Section Header */}
-        <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-16 pb-6 border-b border-neutral-300">
+        <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-14 pb-5 border-b border-neutral-200">
           <div>
             <span className="section-tag font-mono">03 / Works</span>
             <h2 className="section-title mt-2">Featured Projects</h2>
@@ -17,7 +17,7 @@ export default function Projects() {
         </div>
 
         {/* Project Cards Stack */}
-        <div className="flex flex-col gap-12">
+        <div className="flex flex-col gap-10">
           {projects.map((project) => (
             <ProjectCard key={project.id} project={project} />
           ))}

@@ -8,7 +8,7 @@
   }
 
   body {
-    @apply bg-canvas text-charcoal font-sans antialiased selection:bg-pale-sky selection:text-charcoal;
+    @apply bg-canvas text-charcoal font-sans antialiased selection:bg-terracotta-light selection:text-charcoal;
   }
 
   /* Strict restriction: No shadows */
@@ -17,9 +17,9 @@
   }
 
   :focus-visible {
-    outline: 2px solid #1F1F1F;
+    outline: 2px solid #23211E;
     outline-offset: 3px;
-    border-radius: 2px;
+    border-radius: 9999px;
   }
 }
 
@@ -28,25 +28,21 @@
     @apply mx-auto w-full max-w-content px-6 sm:px-10 lg:px-12;
   }
 
-  /* Editorial button styles without gradients or hover movement */
-  .btn-editorial-primary {
-    @apply inline-flex items-center justify-center gap-2 bg-charcoal text-white px-7 py-3.5 text-xs uppercase tracking-[0.18em] font-medium transition-colors hover:bg-neutral-800;
+  /* Rounded pill button styles inspired by the reference image */
+  .btn-pill-primary {
+    @apply inline-flex items-center justify-center gap-2 bg-terracotta text-white rounded-full px-6 py-3 text-xs uppercase tracking-[0.16em] font-medium transition-colors hover:bg-terracotta-dark;
   }
 
-  .btn-editorial-raspberry {
-    @apply inline-flex items-center justify-center gap-2 bg-raspberry text-white px-7 py-3.5 text-xs uppercase tracking-[0.18em] font-medium transition-colors hover:bg-[#4d32d4];
+  .btn-pill-outline {
+    @apply inline-flex items-center justify-center gap-2 bg-transparent text-charcoal border border-neutral-300 rounded-full px-6 py-3 text-xs uppercase tracking-[0.16em] font-medium transition-colors hover:bg-canvas-subtle;
   }
 
-  .btn-editorial-secondary {
-    @apply inline-flex items-center justify-center gap-2 bg-white text-charcoal border border-neutral-300 px-6 py-3.5 text-xs uppercase tracking-[0.18em] font-medium transition-colors hover:bg-neutral-100;
-  }
-
-  .btn-editorial-subtle {
-    @apply inline-flex items-center justify-center gap-2 bg-pale-sky text-charcoal px-5 py-3 text-xs uppercase tracking-[0.16em] font-medium transition-colors hover:bg-[#ded1fa];
+  .btn-pill-sage {
+    @apply inline-flex items-center justify-center gap-2 bg-sage-light text-sage-dark rounded-full px-5 py-2.5 text-xs uppercase tracking-[0.16em] font-medium transition-colors hover:bg-sage/30;
   }
 
   .section-tag {
-    @apply text-xs font-semibold uppercase tracking-[0.24em] text-raspberry;
+    @apply text-xs font-semibold uppercase tracking-[0.24em] text-terracotta;
   }
 
   .section-title {

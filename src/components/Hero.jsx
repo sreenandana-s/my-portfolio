@@ -3,7 +3,6 @@ import {
   File01Icon,
   Download01Icon,
   ArrowRight01Icon,
-  GithubIcon,
 } from "@hugeicons/core-free-icons";
 import { profile } from "../data/profile";
 
@@ -11,179 +10,108 @@ export default function Hero() {
   return (
     <section
       id="top"
-      className="relative min-h-[90vh] pt-32 pb-20 flex items-center"
+      className="relative min-h-[88vh] pt-32 pb-20 flex items-center"
     >
       <div className="container-page w-full">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-10 items-center">
-          {/* Left Column: Architectural Engineering & AI Blueprint Frame */}
-          <div className="lg:col-span-5 flex justify-center lg:justify-start">
-            <div className="w-full max-w-sm sm:max-w-md rounded-t-full bg-pale-sky border border-neutral-300 p-6 sm:p-8 flex flex-col justify-between font-mono">
-              {/* Top Arch Header */}
-              <div className="text-center pt-3 pb-5 border-b border-neutral-300">
-                <span className="text-[10px] uppercase tracking-widest text-neutral-500 block">
-                  TECHNICAL PROFILE
-                </span>
-                <span className="text-xs uppercase tracking-wider text-charcoal font-semibold mt-1 block">
-                  IIIT Kottayam &middot; CSE
-                </span>
-                <span className="text-[10px] text-raspberry font-medium mt-0.5 block">
-                  August 2024 &ndash; Present
-                </span>
-              </div>
-
-              {/* Center Architecture Blueprint Components */}
-              <div className="my-6 space-y-4">
-                {/* 1. Backend & Data Layer Schematic */}
-                <div className="bg-white border border-neutral-300 p-4 space-y-2">
-                  <div className="flex items-center justify-between text-[10px] text-neutral-400 uppercase tracking-wider border-b border-neutral-100 pb-1.5">
-                    <span>Data &amp; Service Layer</span>
-                    <span className="text-charcoal font-semibold">PostgreSQL</span>
-                  </div>
-
-                  <div className="space-y-1.5 text-[10px]">
-                    <div className="flex items-center justify-between px-2 py-1 bg-canvas border border-neutral-200">
-                      <span className="text-charcoal">Supabase &middot; Auth RBAC</span>
-                      <span className="text-raspberry font-semibold text-[9px]">ENFORCED</span>
-                    </div>
-                    <div className="flex items-center justify-between px-2 py-1 bg-canvas border border-neutral-200">
-                      <span className="text-charcoal">REST API &middot; Relational Schema</span>
-                      <span className="text-neutral-500 text-[9px]">200 OK</span>
-                    </div>
-                  </div>
-                </div>
-
-                {/* 2. Transformer & ML Layer Schematic */}
-                <div className="bg-white border border-neutral-300 p-4 space-y-2">
-                  <div className="flex items-center justify-between text-[10px] text-neutral-400 uppercase tracking-wider border-b border-neutral-100 pb-1.5">
-                    <span>AI / ML Inference</span>
-                    <span className="text-raspberry font-semibold">PyTorch</span>
-                  </div>
-
-                  <div className="grid grid-cols-2 gap-2 text-[10px] text-center">
-                    <div className="p-2 bg-canvas border border-neutral-200">
-                      <span className="block text-[8px] text-neutral-500 uppercase">MuRIL-large</span>
-                      <span className="block font-serif text-sm font-normal text-charcoal mt-0.5">88.47%</span>
-                      <span className="block text-[8px] text-neutral-400">Accuracy</span>
-                    </div>
-                    <div className="p-2 bg-canvas border border-neutral-200">
-                      <span className="block text-[8px] text-neutral-500 uppercase">Macro-F1</span>
-                      <span className="block font-serif text-sm font-normal text-raspberry mt-0.5">81.00%</span>
-                      <span className="block text-[8px] text-neutral-400">Test Score</span>
-                    </div>
-                  </div>
-                </div>
-
-                {/* 3. Academic Metrics */}
-                <div className="bg-white border border-neutral-300 p-3 flex items-center justify-between text-[10px]">
-                  <span className="text-neutral-500 uppercase tracking-wider">Academic Standing</span>
-                  <span className="font-semibold text-charcoal">CGPA 8.02 / 10</span>
-                </div>
-              </div>
-
-              {/* Bottom Arch Footer */}
-              <div className="border-t border-neutral-300 pt-3 text-center">
-                <span className="text-[10px] uppercase tracking-widest text-neutral-600 block">
-                  Software Engineering &middot; Full-Stack &middot; AI/ML
-                </span>
-              </div>
-            </div>
-          </div>
-
-          {/* Right Column: Monumental Editorial Typography & Actions */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-14 items-center">
+          {/* Left Column: Editorial Headline & Actions */}
           <div className="lg:col-span-7 flex flex-col justify-center">
-            {/* Section Tag with Correct Date */}
-            <div className="flex items-center gap-3">
-              <span className="h-[1px] w-8 bg-raspberry" />
-              <span className="text-xs font-semibold uppercase tracking-[0.22em] text-raspberry font-mono">
-                Developer Portfolio
-              </span>
-              <span className="text-neutral-400 font-mono text-xs">&middot;</span>
-              <span className="text-xs uppercase tracking-widest text-neutral-600 font-mono">
-                August 2024 &ndash; Present
-              </span>
+            {/* Terracotta Pill Badge */}
+            <div className="inline-flex items-center gap-2 px-4 py-1.5 bg-terracotta text-white rounded-full text-[11px] font-mono uppercase tracking-[0.18em] font-medium w-fit">
+              <span>COMPUTER SCIENCE &middot; IIIT KOTTAYAM</span>
             </div>
 
-            {/* Oversized Name Headline */}
-            <h1 className="mt-5 font-serif text-4xl sm:text-6xl lg:text-[4.6rem] font-normal leading-[1.04] tracking-tight text-charcoal uppercase">
-              Sreenandana S
+            {/* Oversized Editorial Headline with Italic Emphasis */}
+            <h1 className="mt-6 font-serif text-4xl sm:text-5xl lg:text-[4.25rem] font-normal leading-[1.12] tracking-tight text-charcoal">
+              Building software,{" "}
+              <span className="italic text-terracotta">one layer</span> at a
+              time.
             </h1>
 
-            {/* Identity Subtitle */}
-            <p className="mt-3 text-lg sm:text-xl font-light tracking-wide text-charcoal-muted">
-              Computer Science Undergraduate &amp; Software Engineer
+            {/* Clear, Non-Repetitive Identity & Description */}
+            <p className="mt-5 text-lg sm:text-xl text-charcoal font-medium">
+              I&rsquo;m {profile.name}, a Computer Science undergraduate and
+              developer.
             </p>
 
-            {/* Concise Editorial Introduction */}
-            <p className="mt-6 max-w-xl text-base sm:text-[17px] leading-relaxed text-neutral-600 font-light">
-              Engineering across full-stack development, backend systems, database
-              architectures, and AI/ML. Currently pursuing B.Tech in Computer
-              Science and Engineering at IIIT Kottayam, building resilient applications
-              with React, Node.js, Python, and PostgreSQL.
+            <p className="mt-3 max-w-xl text-base text-charcoal-muted leading-relaxed font-light">
+              Crafting reliable digital experiences across full-stack
+              development, scalable backend systems, database architectures, and
+              machine learning models.
             </p>
 
-            {/* Action Buttons Row */}
-            <div className="mt-9 flex flex-wrap items-center gap-3">
-              {/* Primary Project Action */}
-              <a
-                href="#projects"
-                className="btn-editorial-primary"
-              >
+            {/* Rounded Pill Action Buttons (Matching reference "Find your blend" & "Take the quiz") */}
+            <div className="mt-8 flex flex-wrap items-center gap-3.5">
+              {/* Primary Terracotta Pill Button */}
+              <a href="#projects" className="btn-pill-primary">
                 <span>View Projects</span>
                 <HugeiconsIcon icon={ArrowRight01Icon} size={15} />
               </a>
 
-              {/* Functional Resume Button (Opens PDF in new tab with optional download) */}
-              <div className="inline-flex">
+              {/* Secondary Outline Pill Button (Resume with open + download) */}
+              <div className="inline-flex items-center bg-transparent border border-neutral-300 rounded-full">
                 <a
                   href={profile.resumeUrl}
                   target="_blank"
                   rel="noreferrer"
-                  className="btn-editorial-secondary !border-r-0"
+                  className="px-6 py-3 text-xs uppercase tracking-[0.16em] font-medium text-charcoal hover:text-terracotta transition-colors flex items-center gap-2"
                 >
                   <HugeiconsIcon icon={File01Icon} size={14} />
-                  <span>Resume</span>
+                  <span>Resume (PDF)</span>
                 </a>
+                <span className="h-4 w-[1px] bg-neutral-300" />
                 <a
                   href={profile.resumeUrl}
                   download="Sreenandana_S_Resume.pdf"
-                  className="btn-editorial-secondary !px-3.5 hover:bg-neutral-200"
+                  className="px-3.5 py-3 text-charcoal-muted hover:text-terracotta transition-colors"
                   title="Download Resume PDF"
                   aria-label="Download Resume PDF"
                 >
                   <HugeiconsIcon icon={Download01Icon} size={14} />
                 </a>
               </div>
-
-              {/* GitHub Button */}
-              <a
-                href={profile.github}
-                target="_blank"
-                rel="noreferrer"
-                className="btn-editorial-subtle"
-              >
-                <HugeiconsIcon icon={GithubIcon} size={15} />
-                <span>GitHub</span>
-              </a>
             </div>
+          </div>
 
-            {/* Clean Aligned Bottom Metadata Bar */}
-            <div className="mt-14 pt-8 border-t border-neutral-300">
-              <div className="grid grid-cols-2 sm:grid-cols-4 gap-6 font-mono text-xs text-neutral-600">
-                <div>
-                  <span className="text-neutral-400 uppercase tracking-widest block text-[10px]">Institution</span>
-                  <span className="font-medium text-charcoal mt-1 block">{profile.universityShort}</span>
+          {/* Right Column: Sage Arch with 2 Vertical Cards */}
+          <div className="lg:col-span-5 flex justify-center lg:justify-end">
+            <div className="w-full max-w-sm sm:max-w-md h-[27rem] sm:h-[30rem] rounded-t-full bg-sage p-6 sm:p-7 relative flex flex-col justify-end border border-neutral-300/40">
+              {/* 2 Vertical Cards - Equally Prominent */}
+              <div className="grid grid-cols-2 gap-3 sm:gap-4 items-end">
+                {/* Card 1: Full-Stack Development */}
+                <div className="bg-white/95 border border-neutral-200/90 rounded-2xl p-4 sm:p-5 flex flex-col justify-between h-56 sm:h-64">
+                  <span className="font-mono text-[10px] uppercase tracking-wider text-charcoal-muted">
+                    01
+                  </span>
+                  <div>
+                    <span className="font-mono text-[9px] uppercase tracking-wider text-charcoal-muted block">
+                      Interface &amp; Web
+                    </span>
+                    <span className="font-serif text-sm sm:text-base font-semibold text-charcoal block leading-tight mt-1">
+                      Full-Stack Development
+                    </span>
+                    <span className="font-mono text-[10px] text-neutral-400 block mt-1.5">
+                      React &middot; Node.js
+                    </span>
+                  </div>
                 </div>
-                <div>
-                  <span className="text-neutral-400 uppercase tracking-widest block text-[10px]">Academic Standing</span>
-                  <span className="font-medium text-raspberry mt-1 block">CGPA {profile.cgpa}</span>
-                </div>
-                <div>
-                  <span className="text-neutral-400 uppercase tracking-widest block text-[10px]">Timeline</span>
-                  <span className="font-medium text-charcoal mt-1 block">August 2024 &ndash; Present</span>
-                </div>
-                <div>
-                  <span className="text-neutral-400 uppercase tracking-widest block text-[10px]">Primary Domain</span>
-                  <span className="font-medium text-charcoal mt-1 block">Software Engineering</span>
+
+                {/* Card 2: AI & Machine Learning */}
+                <div className="bg-white/95 border border-neutral-200/90 rounded-2xl p-4 sm:p-5 flex flex-col justify-between h-56 sm:h-64">
+                  <span className="font-mono text-[10px] uppercase tracking-wider text-charcoal-muted">
+                    02
+                  </span>
+                  <div>
+                    <span className="font-mono text-[9px] uppercase tracking-wider text-charcoal-muted block">
+                      Models &amp; NLP
+                    </span>
+                    <span className="font-serif text-sm sm:text-base font-semibold text-charcoal block leading-tight mt-1">
+                      AI &amp; Machine Learning
+                    </span>
+                    <span className="font-mono text-[10px] text-neutral-400 block mt-1.5">
+                      PyTorch &middot; NLP
+                    </span>
+                  </div>
                 </div>
               </div>
             </div>
